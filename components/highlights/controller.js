@@ -1,12 +1,12 @@
 const { finishPromiseExecution } = require('../../helpers/promise');
 const store = require('./store');
 
-const list = () => {
+const highlights = () => {
     return new Promise((resolve, reject) => {
-        finishPromiseExecution(store.getAll(), resolve, reject);
+        finishPromiseExecution(store.getHighLights(), resolve, reject);
     })
 };
 
 module.exports = {
-    list,
+    highlights
 };
