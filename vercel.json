@@ -12,6 +12,10 @@
             "dest": "server.js"
         }, 
         {
+            "src": "/portfolio/highlights",
+            "dest": "server.js"
+        }, 
+        {
             "src": "/blog",
             "dest": "server.js"
         },
