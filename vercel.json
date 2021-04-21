@@ -19,5 +19,8 @@
             "src": "/contact",
             "dest": "/server.js"
         }
-    ]
+    ],
+    "rewrites": [{
+        "source": "/gallery/(.*)", "destination": "/public/gallery/" 
+    }]
 }
