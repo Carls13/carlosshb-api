@@ -20,6 +20,10 @@
             "dest": "server.js"
         },
         {
+            "src": "/highlights",
+            "dest": "server.js"
+        },
+        {
             "src": "/static/(.*)", 
             "dest": "server.js" 
         }
