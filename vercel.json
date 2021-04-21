@@ -20,7 +20,7 @@
             "dest": "server.js"
         },
         {
-            "source": "/gallery/(.*)", 
+            "src": "/gallery/(.*)", 
             "dest": "/public/gallery/" 
         }
     ]
