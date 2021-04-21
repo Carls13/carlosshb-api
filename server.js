@@ -11,6 +11,7 @@ const router = require('./network/routes');
 app.use(cors());
 
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
 router(app);
 

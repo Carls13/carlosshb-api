@@ -7,9 +7,8 @@ const sendEmail = (name, email, subject, message) => {
         }).catch((error) => {
             reject(error);
         })
-
-    })
-}
+    });
+};
 
 module.exports = {
     sendEmail

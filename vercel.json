@@ -8,11 +8,11 @@
     ],
     "routes": [
         {
-            "src": "/portfolio",
+            "src": "/portfolio/*",
             "dest": "server.js"
         }, 
         {
-            "src": "/portfolio/highlights",
+            "src": "/portfolio",
             "dest": "server.js"
         }, 
         {
