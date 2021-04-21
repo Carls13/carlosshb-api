@@ -20,8 +20,8 @@
             "dest": "server.js"
         },
         {
-            "src": "/gallery/(.*)", 
-            "dest": "/public/gallery/" 
+            "src": "/static/(.*)", 
+            "dest": "server.js" 
         }
     ]
 }

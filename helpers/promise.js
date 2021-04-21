@@ -8,13 +8,11 @@ const finishPromiseExecution = (promise, resolve, reject, addScreenshots = false
             return formatEntry(element, ['preview'], 1);
         });
 
-        console.log({ data });
-
         if (addScreenshots) {
             data = {
                 ...data[0],
-                mobileScreenshot: `${config.backendUri}gallery/${data[0].title}-mobile.png`,
-                desktopScreenshot: `${config.backendUri}gallery/${data[0].title}.png`,
+                mobileScreenshot: `${config.backendUri}static/gallery/${data[0].title}-mobile.png`,
+                desktopScreenshot: `${config.backendUri}static/gallery/${data[0].title}.png`,
             };
         }
         resolve(data);
