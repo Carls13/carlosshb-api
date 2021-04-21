@@ -8,23 +8,15 @@
     ],
     "routes": [
         {
-            "src": "/portfolio/*",
+            "src": "/portfolio/(.*)",
             "dest": "server.js"
-        }, 
-        {
-            "src": "/portfolio",
-            "dest": "server.js"
-        }, 
+        },  
         {
             "src": "/blog",
             "dest": "server.js"
         },
         {
             "src": "/contact",
-            "dest": "/server.js"
-        }, 
-        {
-"src": "/contact",
             "dest": "/server.js"
         }
     ]
