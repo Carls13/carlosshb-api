@@ -17,10 +17,11 @@
         },
         {
             "src": "/contact",
-            "dest": "/server.js"
+            "dest": "server.js"
+        },
+        {
+            "source": "/gallery/(.*)", 
+            "dest": "/public/gallery/" 
         }
-    ],
-    "rewrites": [{
-        "source": "/gallery/(.*)", "destination": "/public/gallery/" 
-    }]
+    ]
 }
