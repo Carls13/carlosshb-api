@@ -29,7 +29,7 @@ const takeScreenshot = async (forMobile) => {
                 await page.goto(item.link, {
                     waitUntil: 'networkidle0',
                 });
-                await page.screenshot({ path: `public/portfolio/${item.title}${forMobile ? "-mobile" : ""}.png` });
+                await page.screenshot({ path: `public/gallery/${item.title}${forMobile ? "-mobile" : ""}.png` });
                 await page.close();
                 await browser.close();
 

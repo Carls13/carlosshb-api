@@ -13,8 +13,8 @@ const finishPromiseExecution = (promise, resolve, reject, addScreenshots = false
         if (addScreenshots) {
             data = {
                 ...data[0],
-                mobileScreenshot: `${config.backendUri}portfolio/${data[0].title}-mobile.png`,
-                desktopScreenshot: `${config.backendUri}portfolio/${data[0].title}.png`,
+                mobileScreenshot: `${config.backendUri}gallery/${data[0].title}-mobile.png`,
+                desktopScreenshot: `${config.backendUri}gallery/${data[0].title}.png`,
             };
         }
         resolve(data);
