@@ -5,10 +5,11 @@ const getAll = (limit) => {
     return new Promise((resolve, reject) => {
         store.getAll(limit).then(({ items }) => {
             const data = items.map(element => {
-                return formatEntry(element, ['preview'], true);
+                return formatEntry(element, [], true);
             });
             resolve(data);
         }).catch((error) => {
+            console.log(error);
             reject(error);
         })
     })
