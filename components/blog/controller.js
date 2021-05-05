@@ -1,4 +1,5 @@
 const { formatEntry } = require('../../contentful/utils');
+const { slugToTitle } = require('../../helpers/decode-slug');
 const store = require('./store');
 
 const getAll = (limit) => {
@@ -11,10 +12,25 @@ const getAll = (limit) => {
         }).catch((error) => {
             console.log(error);
             reject(error);
-        })
-    })
+        });
+    });
 }
 
+const getBySlug = (slug) => {
+    const title = slugToTitle(slug, true);
+
+    return new Promise((resolve, reject) => {
+        store.getOneByTitle(title).then(({ items }) => {
+            const data = formatEntry(items[0], []);
+            resolve(data);
+        }).catch((error) => {
+            console.log(error);
+            reject(error);
+        });
+    });
+};
+
 module.exports = {
-    getAll
+    getAll,
+    getBySlug
 };

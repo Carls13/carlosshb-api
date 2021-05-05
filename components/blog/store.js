@@ -16,6 +16,16 @@ const getAll = (limit) => {
     return client.getEntries(config);
 };
 
+const getOneByTitle = async (title) => {
+    const response = await client.getEntries({
+        'content_type': 'blog',
+        'fields.title[match]': title
+    });
+
+    return response;
+};
+
 module.exports = {
     getAll,
+    getOneByTitle
 };

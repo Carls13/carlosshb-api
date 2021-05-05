@@ -2,12 +2,15 @@ const capitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-const slugToTitle = (slug) => {
+const slugToTitle = (slug, capitalizeOnlyFirst = false) => {
     let capitalizedTitle = '';
 
-    const words = slug.replace("-", " ").split(" ");
+    const words = slug.replace(/-/gi, " ").split(" ");
     words.forEach((element, i) => {
-        capitalizedTitle += capitalize(element);
+        if (i === 0) capitalizedTitle += capitalize(element);
+        else {
+            capitalizedTitle += capitalizeOnlyFirst ? element : capitalize(element);
+        }
         if (i < words.length - 1) capitalizedTitle += " ";
     });
 

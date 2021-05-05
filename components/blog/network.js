@@ -11,6 +11,15 @@ router.get('/', (req, res) => {
     }).catch((error) => {
         response.error(req, res, 'Error retrieving blog', 500, error);
     })
-})
+});
+
+router.get('/:slug', (req, res) => {
+    const { slug } = req.params;
+    controller.getBySlug(slug).then((data) => {
+        response.success(req, res, data, 200);
+    }).catch((error) => {
+        response.error(req, res, "Error retrieving blog item!", 500, error);
+    })
+});
 
 module.exports = router;

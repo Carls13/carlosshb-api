@@ -1,6 +1,5 @@
 const formatEntry = (entry, images, wantsDate = false) => {
     const elementData = entry.fields;
-    const { id } = entry.sys;
     if (wantsDate) {
         const { createdAt } = entry.sys;
         elementData.createdAt = createdAt;
@@ -10,10 +9,7 @@ const formatEntry = (entry, images, wantsDate = false) => {
         elementData[image] = imageItem;
     });
 
-    return {
-        ...elementData,
-        id
-    };
+    return elementData;
 }
 
 module.exports = {
