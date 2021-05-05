@@ -21,7 +21,7 @@ const getBySlug = (slug) => {
 
     return new Promise((resolve, reject) => {
         store.getOneByTitle(title).then(({ items }) => {
-            const data = formatEntry(items[0], []);
+            const data = formatEntry(items[0], [], true);
             resolve(data);
         }).catch((error) => {
             console.log(error);
