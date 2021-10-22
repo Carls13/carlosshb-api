@@ -34,6 +34,7 @@ async function sendMail(name, email, subject, message) {
     await transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(error);
+            throw e;
         } else {
             console.log(info);
             return info;
