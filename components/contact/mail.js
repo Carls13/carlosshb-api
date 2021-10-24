@@ -16,6 +16,7 @@ async function sendMail(name, email, subject, message) {
         }
     });
 
+
     const mailOptions = {
         from: 'Carlangas<charlesshb98@gmail.com>',
         to: 'devcarlosshb98@gmail.com',
@@ -30,6 +31,8 @@ async function sendMail(name, email, subject, message) {
         <p>Por favor, ponte en contacto con ${name} lo más pronto posible. Ten un gran día. </p>
         `
     };
+
+    console.log({ transporter, mailOptions });
 
     await transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
