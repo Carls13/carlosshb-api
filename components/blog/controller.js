@@ -8,7 +8,7 @@ const getAll = (limit) => {
             const data = items.map(element => {
                 return formatEntry(element, [], true);
             });
-            resolve(data);
+            resolve(data.reverse());
         }).catch((error) => {
             console.log(error);
             reject(error);
