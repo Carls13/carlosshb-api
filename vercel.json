@@ -12,6 +12,10 @@
             "dest": "server.js"
         },  
         {
+            "src": "/locution/(.*)",
+            "dest": "server.js"
+        },  
+        {
             "src": "/blog/(.*)",
             "dest": "server.js"
         },
