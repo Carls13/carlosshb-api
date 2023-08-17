@@ -1,11 +1,13 @@
 const { formatEntry } = require("../contentful/utils");
 const config = require("./../config");
 
-const finishPromiseExecution = (promise, resolve, reject, addScreenshots = false) => {
+const finishPromiseExecution = (promise, resolve, reject, addScreenshots = false, hasImages = true) => {
+    const imagesArray = hasImages ? ['preview'] : [];
+    
     promise.then((response) => {
         const { items } = response;
         let data = items.map((element) => {
-            return formatEntry(element, ['preview'], 1);
+            return formatEntry(element, imagesArray, 1);
         });
 
         if (addScreenshots) {
