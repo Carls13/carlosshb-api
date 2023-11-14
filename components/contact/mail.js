@@ -16,8 +16,6 @@ async function sendMail(name, email, subject, message) {
         }
     });
 
-    console.log({ config });
-
     await new Promise((resolve, reject) => {
         // verify connection configuration
         transporter.verify(function (error, success) {
@@ -47,8 +45,6 @@ async function sendMail(name, email, subject, message) {
         `
     };
 
-    console.log({ transporter, mailOptions });
-
     await new Promise((resolve, reject) => {
         // send mail
         transporter.sendMail(mailOptions, (err, info) => {
@@ -56,7 +52,6 @@ async function sendMail(name, email, subject, message) {
                 console.error(err);
                 reject(err);
             } else {
-                console.log(info);
                 resolve(info);
             }
         });
