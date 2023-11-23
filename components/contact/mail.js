@@ -23,7 +23,6 @@ async function sendMail(name, email, subject, message) {
                 console.log(error);
                 reject(error);
             } else {
-                console.log("Server is ready to take our messages");
                 resolve(success);
             }
         });
