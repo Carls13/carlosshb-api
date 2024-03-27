@@ -4,7 +4,7 @@ const getAll = () => {
     return client.getEntries({
         'content_type': 'portfolio',
         "order": 'sys.createdAt'
-    });
+    }).reverse();
 };
 
 const getOneByName = async (title) => {
