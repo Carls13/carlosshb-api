@@ -3,8 +3,8 @@ const client = require("../../contentful/client");
 const getAll = () => {
     return client.getEntries({
         'content_type': 'portfolio',
-        "order": 'sys.createdAt'
-    }).reverse();
+        "order": '-sys.createdAt'
+    });
 };
 
 const getOneByName = async (title) => {
